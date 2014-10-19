@@ -1,4 +1,4 @@
 ChemOceanographyGuide
 =====================
 
-Sea water and sediment analysis
+Sea water, sediment and suspended particulate matter analysis.

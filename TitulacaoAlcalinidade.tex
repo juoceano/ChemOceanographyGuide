@@ -1,0 +1,195 @@
+%-----------------------------------------------------------------------------%
+%	Licença
+%-----------------------------------------------------------------------------%
+%This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+%-----------------------------------------------------------------------------%
+%	Pacotes e outras configurações
+%-----------------------------------------------------------------------------%
+\documentclass[a4paper,10pt]{SelfArx}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{epsf,epsfig} % include graphics [pdf, png etc]
+\usepackage{setspace}
+\usepackage{amsmath} % allow the use of mathematical formulas
+\usepackage{textcomp} % which provide many text symbols
+\usepackage{natbib} %bibtex flexible bibliography support.
+\usepackage[version=3]{mhchem} %chemistry package
+\usepackage{float}
+\restylefloat{table}
+\usepackage{titlesec}
+%\titlespacing{\section}
+
+%-----------------------------------------------------------------------------%
+%	Adicionar a Watermark
+%-----------------------------------------------------------------------------%
+% to insert draft-like watermark
+% \usepackage{draftwatermark} %Put a grey textual watermark on document pages.
+% \SetWatermarkAngle{45}
+% \SetWatermarkLightness{0.8}
+% \SetWatermarkFontSize{5cm}
+% \SetWatermarkScale{5}
+% \SetWatermarkText{XXX} % XXX = text that I want to see as watermark
+
+%-----------------------------------------------------------------------------%
+%	Colunas
+%-----------------------------------------------------------------------------%
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%-----------------------------------------------------------------------------%
+%	Cores
+%-----------------------------------------------------------------------------%
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%-----------------------------------------------------------------------------%
+%	Inforamações do Artigo 
+%-----------------------------------------------------------------------------%
+%\pdfinfo{%
+ % /Title    (Guia para as aulas práticas)
+  %/Author   (Ju Leonel)
+  %/Subject  (Oceanografia Química)
+  %}
+
+\JournalInfo{Guia de Oceanografia Química - Titulação} % Journal information
+\Archive{Determinação de Alcalinidade} % Additional notes (e.g. copyright, DOI, review/research article)
+\PaperTitle{Determinação de Alcalinidade da Água do Mar } % Article title
+\Authors{Aula Prática de Oceanografia Química - 19 e 20 de novembro de 2014} % Authors
+\affiliation{~} % Corresponding author
+% Keywords - if you don't want any simply remove all the text between the curly brackets
+\Keywords{}
+\newcommand{\keywordname}{~} % Defines the keywords heading name
+
+
+%-----------------------------------------------------------------------------%
+%	ABSTRACT
+%-----------------------------------------------------------------------------%
+%change ABSTRACT to something else
+\addto{\captionsbrazilian}{\renewcommand{\abstractname}{Objetivo da Prática}}
+\Abstract{O objetivo dessa atividade é demonstrar o método de determinação de alcalinidade na água do mar por titulação.}
+
+%-----------------------------------------------------------------------------%
+\begin{document}
+\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+\renewcommand{\contentsname}{Conteúdo}
+\tableofcontents % Print the contents section
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%-----------------------------------------------------------------------------%
+%	ARTICLE CONTENTS
+%-----------------------------------------------------------------------------%
+\section*{Método de Análise: Mohr-Nudsen} % The \section*{} command stops section numbering
+\addcontentsline{toc}{section}{Método de Análise: Mohr-Nudsen} % Adds this section to the table of contents
+O método de análise apresentado aqui baseia-se no descrito pela American Public Health Association (APHA, 1998).
+
+%-----------------------------------------------------------------------------%
+\section{Fundamento Analítico}
+
+Uma das definições de alcalinidade é a sua capacidade quantitativa de neutralizar um ácido forte, até um pH desejado. Portanto, é a soma de todos os componentes com caráter básico tituláveis, e o valor medido pode variar significativamente com o ponto final da daterminação. 
+
+A alcalinidade da água marinha baseia-se na sua titulação com ácido o qual neutraliza ânions oriundos de ácidos fracos, tais como bicarbonato, carbonato e borato. A água marinha tem alcalinidade total constante de $2,34\times 10^{-3}$ mol de carbonato por Kg e a concentração média de íon bicarbonato é de 0,14 mg $Kg^{-1}$. Ânions fosfato, arseniato e silicato existem em quantidades traços na água marinha e portanto suas concentrações são desprezíveis 
+
+A alcalinidade total da água do mar refere-se à soma de ânions com maior representatividade: bicarbonatos (89,8\%), carbonatos (6,7\%) e boratos (2,9\%).
+
+\vspace{0.15cm}
+$A_T$ = [\ce{HCO3-}] + 2[\ce{CO3^2-}] + [\ce {B(OH)4-}] + [\ce{OH-}] - [\ce{H+}]
+\vspace{0.15cm}
+
+A alcalinidade carbonática é representada pelos íons bicarbonato e carbonato.
+
+\vspace{0.15cm}
+$A_C$ = [\ce{HCO3-}] + 2[\ce{CO3^2-}] 
+\vspace{0.15cm}
+
+Dessa forma, o presente método se baseia na titulação da água do mar com ácido forte. O indicador fenolftaleína permite a medida da “alcalinidade carbonática” e o indicadr alaranjado de metila permite medir a “alcalinidade total”.
+
+%-----------------------------------------------------------------------------%
+\section{Amostragem e Estocagem}
+As amostras para determinação de AT devem ser coletadas em frascos de vidro de borosilicato de cor âmbar, com capacidade de 300 mL, com tampa de vidro esmerilhada e de boca estreita.
+
+A partir da garrafa a coleta é feita logo após a amostragem de pH usando-se o mesmo dispositivo, ou seja, um tubo de plástico ou vidro com ponta afilada adaptada à saída da garrafa hidrográfica, que possa ser mergulhado no fundo do frasco.
+
+A amostra deve ser retirada lentamente, deixando-se extravasar um volume da mesma antes de tampar. A contaminação atmosférica deve ser rigorosamente evitada, não deve haver bolhas de ar sob a tampa e o frasco deve ser fechado hermeticamente.
+%-----------------------------------------------------------------------------%
+\section{Procedimentos Analíticos}
+
+\subsection{Reagentes}
+
+% [noitemsep] removes whitespace between the items for a compact look
+\begin{enumerate}[noitemsep]
+\item Ácido clorídrico 0,02M 
+\item Indicador fenolftaleína -  preparar uma solução a 1\% de massa/volume em álcool etílico a 96 GL
+\item Indicador verde de bromocresol - dissolver 0,1 g de sal sódico de verde bromocresol em 100 mL de água destialda (pH 4,5)
+\item Indicador alaranjado de metila - preparar uma solução a 1\% em massa/volume em álcool etílico a 96GL.
+\end{enumerate}
+
+\subsection{Titulação das Amostras}
+% [noitemsep] removes whitespace between the items for a compact look
+\begin{enumerate}[noitemsep]
+\item Adicionar em 100 mL de amostra de 5 a 10 gotas do indicador fenolftaleína 
+\item Titular com uma solução padrão de 0,02 M de ácido clorídrico até mudança de cor da solução para incolor.
+\ item Repetir a titulação com 5 a 10 gotas de indicador alaranjado de metila.
+\end{enumerate}
+
+%-----------------------------------------------------------------------------%
+\section{Cálculos}
+
+\indent 
+\textbf {Cálculo da alcalinidade parcial (carbonática)}
+
+\begin{center}
+$[A_{C}] = (V1_{HCl} * [HCl])/V_{am}$
+\end{center}
+
+Onde:
+
+$V1_{HCl}$ = volume de HCl usado na titulação con fenolftaleína
+
+$[HCl]$ = concentração do HCl
+
+$V_{am}$ = volume de amostra utilizada
+
+
+\vspace{0.15cm}
+\noindent 
+\textbf {Cálculo da alcalinidade total}
+
+\begin{center}
+$[A_{T}] = (V2_{HCl} * [HCl])/V_{am}$
+\end{center}
+
+Onde:
+
+$V2_{HCl}$ = volume de HCl usado na titulação com indicador alaranjado de metila
+
+$[HCl]$ = concentração do HCl usado na titulação
+
+$V_{am}$ = volume de amostra utilizada
+
+
+
+
+ 
+%-----------------------------------------------------------------------------%
+%	Lista de Referencias
+%-----------------------------------------------------------------------------%
+%\phantomsection
+\section{Referências}
+American Public Health Association (APHA)(1998). Standard methods for the examination of water and wastewater. Washington. 1193p.
+
+\bibliographystyle{unsrt}
+% \bibliography{sample}
+
+\end{document}
+
+
+

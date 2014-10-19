@@ -1,0 +1,228 @@
+%-----------------------------------------------------------------------------%
+%	Licença
+%-----------------------------------------------------------------------------%
+%This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+%-----------------------------------------------------------------------------%
+%	Pacotes e outras configurações
+%-----------------------------------------------------------------------------%
+\documentclass[a4paper,10pt]{SelfArx}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{epsf,epsfig} % include graphics [pdf, png etc]
+\usepackage{setspace}
+\usepackage{amsmath} % allow the use of mathematical formulas
+\usepackage{textcomp} % which provide many text symbols
+\usepackage{natbib} %bibtex flexible bibliography support.
+\usepackage[version=3]{mhchem} %chemistry package
+\usepackage{float}
+\restylefloat{table}
+\usepackage{titlesec}
+%\titlespacing{\section}
+
+%-----------------------------------------------------------------------------%
+%	Adicionar a Watermark
+%-----------------------------------------------------------------------------%
+% to insert draft-like watermark
+% \usepackage{draftwatermark} %Put a grey textual watermark on document pages.
+% \SetWatermarkAngle{45}
+% \SetWatermarkLightness{0.8}
+% \SetWatermarkFontSize{5cm}
+% \SetWatermarkScale{5}
+% \SetWatermarkText{XXX} % XXX = text that I want to see as watermark
+
+%-----------------------------------------------------------------------------%
+%	Colunas
+%-----------------------------------------------------------------------------%
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%-----------------------------------------------------------------------------%
+%	Cores
+%-----------------------------------------------------------------------------%
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%-----------------------------------------------------------------------------%
+%	Inforamações do Artigo 
+%-----------------------------------------------------------------------------%
+%\pdfinfo{%
+ % /Title    (Guia para as aulas práticas)
+  %/Author   (Ju Leonel)
+  %/Subject  (Oceanografia Química)
+  %}
+
+\JournalInfo{Guia de Análises Químicas - Gravimetria} % Journal information
+\Archive{Material Particulado em Suspensão} % Additional notes (e.g. copyright, DOI, review/research article)
+\PaperTitle{Determinação de Material Particulado em Suspensão } % Article title
+\Authors{Disciplina: de Geoquímica - Curso: Oceanografia - 29 de setembro de 2014} % Authors
+\affiliation{~} % Corresponding author
+% Keywords - if you don't want any simply remove all the text between the curly brackets
+\Keywords{}
+\newcommand{\keywordname}{~} % Defines the keywords heading name
+
+
+%-----------------------------------------------------------------------------%
+%	ABSTRACT
+%-----------------------------------------------------------------------------%
+%change ABSTRACT to something else
+\addto{\captionsbrazilian}{\renewcommand{\abstractname}{Objetivo da Prática}}
+\Abstract{O objetivo dessa atividade é usar o método gravimétrico para determinar a quantidade de material particulado na amostras de água coletada na disciplina de Geoquímica. A água filtrada será armazenada para futuras análises de metais e fosfato e a os filtros serão armazenados para análise de metais e carbono orgânico.}
+%-----------------------------------------------------------------------------%
+\begin{document}
+\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+\renewcommand{\contentsname}{Conteúdo}
+\tableofcontents % Print the contents section
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%-----------------------------------------------------------------------------%
+%	ARTICLE CONTENTS
+%-----------------------------------------------------------------------------%
+\section*{Método de Análise: gravimétrico} % The \section*{} command stops section numbering
+\addcontentsline{toc}{section}{Método de Análise: Gravimetria} % Adds this section to the table of contents
+O método de análise apresentado aqui baseia-se no descrito por Strickland e Parsons (1972).
+%-----------------------------------------------------------------------------%
+
+\section{Fundamento Analítico}
+
+A separação entre material em particulado e material dissolvido é operacional: partículas com diâmetro maiores que 0,45 µm são consideradas em suspensão e partículas menores dissolvidas. Portanto, a separação e quantificação do material particulado em suspensão e realizado pela filtração de um volume conhecido de água.
+%-----------------------------------------------------------------------------%
+
+\section{Procedimentos Analíticos}
+% [noitemsep] removes whitespace between the items for a compact look
+\subsection{Preparação dos Filtros}
+\begin{enumerate}[noitemsep]
+\item Calcinar os filtros a 450°C por 4 horas
+\item Armazenar em dessecador até estarem frios
+\item Pesar o filtro em balança analítica manuseando com a pinça
+\item Anotar o peso de cada filtro (P1)
+\end{enumerate}
+
+\subsection{Filtração das amostras}
+\begin{enumerate}[noitemsep]
+\item Montar o equipamento de filtragem e posicionar um filtro sobre o suporte poroso
+\item Agitar vagarosamente a amostra para homogeneizar
+\item Medir o volume a ser filtrado na proveta (V)
+\item Ligar a bomba e começar a derramar lentamente a amostra sobre o béquer do equipamento
+\item Após filtrar a amostra retirar a amostra do kitassato e armazenar adequadamente para futuras análises
+\item Reposicionar o kitassato e enxaguar o filtro com aproximadamente 5mL (para amostras estuarinas) de água destilada para remoção dos cloretos do filtro – quanto mais salina for a amostra mais volume de água deve ser utilizado para a lavagem.
+\item Após a filtragem retirar cuidadosamente o filtro com a bomba desligada. Colocar o filtro sobre uma placa de Petry já etiquetada ou sobre um envelope de papel
+\item Secar em estufa a 60°C
+\item Após retirar da estufa colocar no dessecador até esfriar
+\item Pesar em balança analítica (P2)
+
+\end{enumerate}
+
+\subsection{Branco}
+Para cada grupo de amostras deve-se fazer um branco do método. Nesse procedimento o filtro é calcinado e pesado (B1), mas não é colocado no equipamento. Esse filtro também e lavado com água destilada, seco em estufa e repesado (B2). A diferença entre B2 e B1 e o valor Br a ser usado no calculo do material e suspensão das amostras.	
+%-----------------------------------------------------------------------------%
+
+\section{Cálculos}
+
+\indent 
+Grasshoff e Wenk
+\textbf {Branco}
+\begin{center}
+$\ Br = (P2_{Br}-P1_{Br})$
+\end{center}
+\vspace{0.15cm}
+
+Onde:
+
+$P1_{Br}$ = peso inicial do filtro (g)
+
+$P2_{Br}$ = peso final do filtro (g)
+
+\vspace{0.20cm}
+
+\textbf {Material Particulado em Suspensão}
+
+\vspace{0.15cm}
+
+\begin{center}
+$\{[(P2_{Am}-P1_{Am}) - Br] * 10^6\}/V$
+\end{center}
+\vspace{0.15cm}
+ 
+Onde:
+
+$P1_{Am}$ = peso inicial do filtro (g)
+
+$P2_{Am}$ = peso final do filtro (g)
+
+Br = valor da prova em branco (g)
+
+$10^6$ = fator de conversão de unidade de g $mL^{-1}$ para $mL^{-1}$
+
+V = volume de amostra filtrada (L)
+
+\vspace{0.2cm}
+
+%-----------------------------------------------------------------------------%
+%	Lista de Referencias
+%-----------------------------------------------------------------------------%
+%\phantomsection
+\section{Referências}
+Strickland, J. D. H. e Parsons, T. R. (1972). A practical handbook of seawater analysis. $2^o$ Ed. - Ottawa: Fisheries Research Board of Canada, Bulletin 167, 311p.
+\bibliographystyle{unsrt}
+% \bibliography{sample}
+
+%-----------------------------------------------------------------------------%
+%	Tabelas
+%-----------------------------------------------------------------------------%
+\section{Tabelas - Resultados}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+\hline
+Peso 1 (g) & Peso 2 (g) & Volume (mL) \\
+\hline
+\hline
+&  &   \\
+\hline
+&  &   \\
+\hline
+&  &   \\
+\hline
+&  &   \\
+\hline
+&  &   \\
+\hline
+&  &   \\
+\hline
+&  &   \\
+\hline
+&  &   \\
+\hline
+&  &   \\
+\hline
+&  &   \\
+\hline
+&  &   \\
+\hline
+&  &   \\
+\hline
+&  &   \\
+\hline
+&  &   \\  [1ex] % [1ex] adds vertical space
+\hline
+
+\hline
+\end{tabular}
+\caption{Tabela para Calculo de MPS}
+\label{ex:Tabela 1}
+\end{table}
+\end{document}
+
+
+

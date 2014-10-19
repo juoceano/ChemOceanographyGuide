@@ -1,0 +1,269 @@
+%-----------------------------------------------------------------------------%
+%	Licença
+%-----------------------------------------------------------------------------%
+%This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+%-----------------------------------------------------------------------------%
+%	Pacotes e outras configurações
+%-----------------------------------------------------------------------------%
+\documentclass[a4paper,10pt]{SelfArx}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{epsf,epsfig} % include graphics [pdf, png etc]
+\usepackage{setspace}
+\usepackage{amsmath} % allow the use of mathematical formulas
+\usepackage{textcomp} % which provide many text symbols
+\usepackage{natbib} %bibtex flexible bibliography support.
+\usepackage[version=3]{mhchem} %chemistry package
+\usepackage{float}
+\restylefloat{table}
+\usepackage{titlesec}
+%\titlespacing{\section}
+
+%-----------------------------------------------------------------------------%
+%	Adicionar a Watermark
+%-----------------------------------------------------------------------------%
+% to insert draft-like watermark
+% \usepackage{draftwatermark} %Put a grey textual watermark on document pages.
+% \SetWatermarkAngle{45}
+% \SetWatermarkLightness{0.8}
+% \SetWatermarkFontSize{5cm}
+% \SetWatermarkScale{5}
+% \SetWatermarkText{XXX} % XXX = text that I want to see as watermark
+
+%-----------------------------------------------------------------------------%
+%	Colunas
+%-----------------------------------------------------------------------------%
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%-----------------------------------------------------------------------------%
+%	Cores
+%-----------------------------------------------------------------------------%
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%-----------------------------------------------------------------------------%
+%	Inforamações do Artigo 
+%-----------------------------------------------------------------------------%
+%\pdfinfo{%
+ % /Title    (Guia para as aulas práticas)
+  %/Author   (Ju Leonel)
+  %/Subject  (Oceanografia Química)
+  %}
+
+\JournalInfo{Guia de Oceanografia Química - Titulação} % Journal information
+\Archive{Determinação de Oxigênio Dissolvido} % Additional notes (e.g. copyright, DOI, review/research article)
+\PaperTitle{Determinação de Oxigênio Dissolvido na Água do Mar } % Article title
+\Authors{Aula Prática de Oceanografia Química - 05 e 06 de novembro de 2014} % Authors
+\affiliation{~} % Corresponding author
+% Keywords - if you don't want any simply remove all the text between the curly brackets
+\Keywords{}
+\newcommand{\keywordname}{~} % Defines the keywords heading name
+
+
+%-----------------------------------------------------------------------------%
+%	ABSTRACT
+%-----------------------------------------------------------------------------%
+%change ABSTRACT to something else
+\addto{\captionsbrazilian}{\renewcommand{\abstractname}{Objetivo da Prática}}
+\Abstract{O objetivo dessa atividade é demonstrar o método de determinação de oxigênio dissolvida na água do mar por titulação.}
+
+%-----------------------------------------------------------------------------%
+\begin{document}
+\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+\renewcommand{\contentsname}{Conteúdo}
+\tableofcontents % Print the contents section
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%-----------------------------------------------------------------------------%
+%	ARTICLE CONTENTS
+%-----------------------------------------------------------------------------%
+\section*{Método de Análise: Titulação } % The \section*{} command stops section numbering
+\addcontentsline{toc}{section}{Método de Análise: Titulação} % Adds this section to the table of contents
+O método de análise apresentado aqui baseia-se no descrito por Winkler modificado por Strickland e Parsons (1972).
+%-----------------------------------------------------------------------------%
+\section{Fundamento Analítico}
+
+A determinação de \ce{O2} dissolvido em águas naturais é feita pela técnica desenvolvida por Winkler em 1888. Algumas modificações foram introduzidas no decorrer dos anos para facilitar o trabalho a bordo e minimizar algumas fontes de erros. A amostra coletada é rapidamente fixada com cloreto ou sulfato de manganês e hidróxido de potássio alcalino (KI + KOH). O \ce{Mn(OH)2} reage com o oxigênio presente na amostra formando um composto de manganês trivalente. Assim, o \ce{O2} dissolvido é fixado.
+
+Na análise, após acidificação, o composto trivalente de manganês é dissolvido, oxidando \ce{I-} a \ce{I2}, que é estabilizado pela formação de \ce{I3-} devido ao excesso de \ce{I-}. A quantidade de \ce{I3-} formado é proporcional à quantidade de \ce{O2} da amostra e é determinado pela titulação com solução padronizada de tiossulfato de sódio (\ce{Na2S2O3}).
+
+Uma solução de amido, que forma um complexo azul com \ce{I2}, é utilizada para indicar o ponto de equivalência desta titulação.
+
+As equações estequiométricas envolvidas nesta determinação são:
+
+\textit {\underline{ Etapa de Fixação (imediatamente após a coleta)}}
+\vspace{0.25cm}
+
+\ce { Mn2+ + 2OH- -> Mn(OH)2_{(s)} v} (branco)
+\vspace{0.15cm}
+
+\ce {2Mn(OH)2 + 1/2 O2 + H2O -> 2Mn(OH)3 v} (marrom)
+\vspace{0.15cm}
+
+\textit{\underline {Etapa de acidificação (antes da titulação)}}
+\vspace{0.25cm}
+
+\ce {2Mn(OH)3 + 6H+ + 2I- -> 2Mn2+ + I2 +6H2O}
+\vspace{0.15cm}
+
+\ce {I2 + I- -> I3-}
+\vspace{0.15cm}
+
+O iodo molecular na presença de excess de iodeto forma o complexo triiodeto \ce{I3-}
+\vspace{0.15cm}
+
+\textit{\underline {Etapa Titulação}}
+\vspace{0.25cm}
+
+\ce {I3^{-}_{(aq)} + 2(S2O3)^{2-}_{(aq)} -> 3I^-_{(aq)} + (S4O6)^{2-}_{(aq)}}
+\vspace{0.15cm}
+
+O iodo formado na reação é equivalente a quantidade de oxigênio da amostra e é titulado com solução padronizada de tiossulfato de sódio usando-se como indicador o amido.
+\vspace{0.25cm}
+
+\textbf{Faixa de Concentração:} de 0,0025 a 4 mM.
+
+%\textbf{Precisão:}o desvio padrão é igual a ±0,01 $\times$ 10$^{-3}$.
+%----------------------------------------------------------19,375-------------------%
+\section{Amostragem e Estocagem}
+
+
+As amostras para determinação de oxigênio devem ser coletadas em frascos de vidro de borosilicato de cor âmbar com tampa de viro esmerilhada. 
+
+Quando a amostra for recolhida com garrafa coletora lançada no ambiente, na torneira de saída da água deve ser acoplada uma mangueira de borracha flexível. Essa mangueira deve ser introduzida até o fundo do frasco e mantido nessa posição até o frasco encher, a amostra é deixada transbordar por cerca de um segundo, com o mínimo de agitação e turbulência. 
+
+A amostra para análise de OD deve ser a primeira a ser retirada da garrafa de coleta para evitar-se a expulsão dos gases devido ao aumento da temperatura.
+
+Logo em seguida, adicionar 0,5 mL de cloreto de manganês (II) e 0,5 mL de iodeto alcalino e colocar a tampa sem deixar bolhas de ar. Agitar o frasco vigorosamente para que todo o hidróxido de manganês reaja com o oxigênio da amostra.
+
+Após fixação do oxigênio dissolvido, aguardar toda a precipitação antes de processar a análise durante pelo menos meia hora. As amostras podem ser armazenadas por até 12 horas após a fixação, desde que protegidas da luz e de grandes variações térmicas.
+
+%-----------------------------------------------------------------------------%
+\section{Procedimentos Analíticos}
+
+\subsection{Reagentes}
+
+% [noitemsep] removes whitespace between the items for a compact look
+\begin{enumerate}[noitemsep]
+\item \textbf {Solução de cloreto de manganês II (2 M) - R1} - Dissolver 40 g de \ce{MnCl2.4H2O} ou 32 g de \ce{MnSO4.H2O} com uma pequena quantidade de água destilada e completar o volume em balão volumétrico de 100mL.
+\item \textbf{Solução de iodeto alcalino (KI = 3,6M e KOH = 5,4M) - R2} - Dissolver 60 g de KI e 30 g de KOH, separadamente, na menor quantidade de água possível, tendo o cuidado para que a soma das alíquotas não ultrapasse 100mL. Transferir para um balão volumétrico de 100mL e completar o volume com água destilada.
+\item \textbf{Ácido sulfúrico} - Adicionar, cuidadosamente, 50 mL de \ce{H2SO4} (95 -- 97\%) a 50mL de água destilada (usar resfriamento durante o processo).
+\item \textbf{Solução de tiossulfato de sódio (0,02M)} - Dissolver 5 g de \ce{Na2S2O3} em alíquotas e completar o volume em um balão volumétrico de 1000mL.
+\item \textbf{Solução de amido} - Dispersar 1g de amido solúvel em 100mL de água destilada e aquecer a solução, deixando ebulir durante 1 minuto. Esta solução não se conserva por mais de uma semana.
+\item \textbf{Solução de iodato de potássio (0,1667x10$^{-2}$ M)} - Dissolver, cuidadosamente 356,7mg de \ce{KIO3}, transferir para um balão volumétrico de 1000 mL e completar com água destilada.
+\end{enumerate}
+
+\subsection{Determinação do branco de reagentes}
+% [noitemsep] removes whitespace between the items for a compact look
+\begin{enumerate}[noitemsep]
+	
+\item Colocar 50 mL de água destilada em um erlenmeyer de 150mL.
+\item Adicionar 1 mL de ácido sulfúrico e agitar.
+\item Adicionar 0,5 mL de iodeto alcalino e agitar.
+\item Adicionar e 0,5 mL de cloreto de manganês II e adicionar. 
+\item Adicionar 1 mL de solução de iodato de potássio (padrão).
+\item Titular com solução de tiossulfato de sódio até obter uma coloração ligeiramente amarela. 
+\item Adicionar 0,5 mL do indicador de amido 
+\item Continuar a titulação até a descoloração. 
+\item Anotar o volume gasto de tiossulfato de sódio (V1).
+\item Adicionar mais 1 mL de solução de iodato de potássio.
+\item Continuar a titulação até a descoloração e anotar o volume gasto de tiossulfato de sódio (V2).
+\end{enumerate}
+
+
+\subsection{Padronização do tiossulfato de sódio}
+%[noitemsep] removes whitespace between the items for a compact look
+\begin{enumerate}[noitemsep]
+
+\item Colocar 50 mL de água destilada em um erlenmeyer de 150 mL. 
+\item Adicionar 1 mL de ácido sulfúrico e agitar.
+\item Adicionar 0,5 mL de iodeto alcalino e agitar
+\item Adicionar 0,5 mL de cloreto de manganês II e agitar.
+\item Adicionar 10 mL da solução de iodato padrão com uma pipeta volumétrica.
+\item Titular com solução de tiossulfato de sódio até se obter uma coloração ligeiramente amarela. 
+\item Adicionar 0,5 mL do indicador de amido e continuar a titulação até a descoloração. 
+\item Repetir a padronização três vezes. Anotar os volumes gastos.
+
+\end{enumerate}
+
+\subsection{Titulação das Amostras}
+%[noitemsep] removes whitespace between the items for a compact look
+\begin{enumerate}[noitemsep]
+\item Adicionar 1 mL de ácido sulfúrico no  frasco onde a amostra foi coletada e fixada.
+\item Agitar até a completa dissolução do precipitado. 
+\item Transferir 50 mL da amostra para um erlenmeyer de 150 mL. 
+\item Titular a amostra com a solução de tiossulfato de sódio até a cor amarelo claro. 
+\item Adicionar 0,5 mL de amido e continuar a titulação até o ponto de equivalência (azul para incolor).
+
+\end{enumerate}
+
+%-----------------------------------------------------------------------------%
+\section{Cálculos}
+
+\indent 
+\textbf {Branco}
+
+\begin{center}
+$V_{branco} = V_2 - V_1$
+\end{center}
+
+\noindent
+\textbf {Padronização do Tiossulfato de Sódio}
+
+\begin{center}
+$M_{TS} = [(6 \times M_{IP}) \times V_{IP}]/ (V_{TS} - V_{branco}) $
+\end {center}
+    
+Onde:
+
+$M_{TS}$ = concentração da solução de tiossulfato de sódio (mol L$^{-1}$)
+
+$M_{IP}$ = concentração de solução de iodato padrão (mol L$^{-1}$)
+
+$V_{IP}$ = volume da solução de iodato padrão (mL)
+
+$V_{TS}$ = média dos volumes de solução de tiossulfato gastos na titulação (mL)
+
+\vspace{0.15cm}
+\noindent
+\textbf {Concentração de Oxigênio }
+
+\begin{center}
+$[O_2] = [5603,5 \times M_{TS} \times (V_{TS} -  V_{branco})] / V_0 - V_R$
+\end{center}
+
+Onde:
+
+$M_{TS}$ = concentração da solução de tiossulfato de sódio (mol.L-1)
+
+$V_{TS}$ = média dos volumes de solução de tiossulfato gastos na titulação da amostra(mL)
+
+$V_0$ =  volume total da amostra
+
+$V_R$ = volume de reagentes adicionados antes da liberação do iodo (1mL)
+
+%-----------------------------------------------------------------------------%
+%	Lista de Referencias
+%-----------------------------------------------------------------------------%
+%\phantomsection
+\section{Referências}
+Strickland, J. D. H. e Parsons, T. R. (1972). A practical handbook of seawater analysis. $2^o$ Ed. - Ottawa: Fisheries Research Board of Canada, Bulletin 167, 311p.
+
+\bibliographystyle{unsrt}
+% \bibliography{sample}
+
+
+\end{document}
+
+
+

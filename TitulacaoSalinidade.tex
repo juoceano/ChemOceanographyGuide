@@ -1,0 +1,312 @@
+%-----------------------------------------------------------------------------%
+%	Licença
+%-----------------------------------------------------------------------------%
+%This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+%-----------------------------------------------------------------------------%
+%	Pacotes e outras configurações
+%-----------------------------------------------------------------------------%
+\documentclass[a4paper,10pt]{SelfArx}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{epsf,epsfig} % include graphics [pdf, png etc]
+\usepackage{setspace}
+\usepackage{amsmath} % allow the use of mathematical formulas
+\usepackage{textcomp} % which provide many text symbols
+\usepackage{natbib} %bibtex flexible bibliography support.
+\usepackage[version=3]{mhchem} %chemistry package
+\usepackage{float}
+\restylefloat{table}
+\usepackage{titlesec}
+%\titlespacing{\section}
+
+%-----------------------------------------------------------------------------%
+%	Adicionar a Watermark
+%-----------------------------------------------------------------------------%
+% to insert draft-like watermark
+% \usepackage{draftwatermark} %Put a grey textual watermark on document pages.
+% \SetWatermarkAngle{45}
+% \SetWatermarkLightness{0.8}
+% \SetWatermarkFontSize{5cm}
+% \SetWatermarkScale{5}
+% \SetWatermarkText{XXX} % XXX = text that I want to see as watermark
+
+%-----------------------------------------------------------------------------%
+%	Colunas
+%-----------------------------------------------------------------------------%
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%-----------------------------------------------------------------------------%
+%	Cores
+%-----------------------------------------------------------------------------%
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%-----------------------------------------------------------------------------%
+%	Inforamações do Artigo 
+%-----------------------------------------------------------------------------%
+%\pdfinfo{%
+ % /Title    (Guia para as aulas práticas)
+  %/Author   (Ju Leonel)
+  %/Subject  (Oceanografia Química)
+  %}
+
+\JournalInfo{Guia de Oceanografia Química - Titulação} % Journal information
+\Archive{Determinação de Clorinidade} % Additional notes (e.g. copyright, DOI, review/research article)
+\PaperTitle{Determinação de Clorinidade da Água do Mar } % Article title
+\Authors{Aula de Oceanografia Química - 22 e 23 de outubro de 2014} % Authors
+\affiliation{~} % Corresponding author
+% Keywords - if you don't want any simply remove all the text between the curly brackets
+\Keywords{}
+\newcommand{\keywordname}{~} % Defines the keywords heading name
+
+
+%-----------------------------------------------------------------------------%
+%	ABSTRACT
+%-----------------------------------------------------------------------------%
+%change ABSTRACT to something else
+\addto{\captionsbrazilian}{\renewcommand{\abstractname}{Objetivo da Prática}}
+\Abstract{O objetivo dessa atividade é demonstrar o método de determinação de clorinidade na água do mar por titulação de precipitação.}
+
+%-----------------------------------------------------------------------------%
+\begin{document}
+\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+\renewcommand{\contentsname}{Conteúdo}
+\tableofcontents % Print the contents section
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%-----------------------------------------------------------------------------%
+%	ARTICLE CONTENTS
+%-----------------------------------------------------------------------------%
+\section*{Método de Análise: Titulação} % The \section*{} command stops section numbering
+\addcontentsline{toc}{section}{Método de Análise: Titulação} % Adds this section to the table of contents
+O método de análise apresentado aqui baseia-se no descrito por Mohr-Nudsen e modificado por Grasshoff e Wenk (1972).
+%-----------------------------------------------------------------------------%
+\section{Fundamento Analítico}
+
+O presente método baseia-se na titulação dos íons haletos \ce{(Cl^- , Br^- , I^-)}
+presentes na água do mar, com solução pa\-dro\-ni\-za\-da de nitrato de prata \ce{(AgNO3)},
+usando solução de cromato de potássio \ce{(K2CrO4)} como indicador.
+Durante a titulação ocorre a precipitação dos seguintes sais:
+\vspace{0.15cm}
+
+\ce {Cl^-_{(aq)}  + Ag+_{(aq)} ->  AgCl_{(s)} v } (branco)
+
+K$_{ps}$ = 1,55 $\times$ 10$^{-10}$
+\vspace{0.15cm}
+
+\ce {Br^-_{(aq)}  + Ag+_{(aq)} ->  AgBr_{(s)} v} (amarelo)   
+
+K$_{ps}$ = 7,76 $\times$ 10$^{-13}$
+\vspace{0.15cm}
+
+\ce {I^-_{(aq)}  + Ag+_{(aq)} ->  AgI_{(s)} v} (laranja)
+
+K$_{ps}$ = 1,51 $\times$ 10$^{-16}$
+\vspace{0.15cm}
+
+O ponto final da titulação é indicado pela formação do cromato de prata:
+\vspace{0.15cm}
+
+\ce {CrO4^{2-}_{(aq)} + Ag+_{(aq)} ->  Ag2CrO4_{(s)} v} (marrom avermelhado) 
+
+Kps = 8,91 $\times$ 10$^{-12}$
+\vspace{0.15cm}
+
+Se a concentração do íon cromato \ce{(CrO4^{2-})} for mantida em aproximadamente
+5,0 $\times$ 10$^{-3}$ mol L$^{-1}$ durante a titulação, não ocorrerá a precipitação de \ce{Ag2CrO4} até que a concentração de íon prata \ce{(Ag+)} seja igual a 4,2 $\times$ 10$^{-5}$ mol L$^{-1}$.
+
+\textbf{Faixa de Concentração:} o método descrito atende praticamente todo o intervalo de clorinidade em águas marinhas naturais, ou seja, de 0 a 22 $\times$ 10$^{-3}$.
+
+\textbf{Precisão:} o desvio padrão é igual a ±0,01 $\times$ 10$^{-3}$.
+%----------------------------------------------------------19,375-------------------%
+\section{Amostragem e Estocagem}
+As amostras devem ser coletadas em frascos de vidro de 250 mL com tampas para evitar contaminação e evaporação. Antes da amostragem, lavar o frasco com a própria amostra três vezes e, após a coleta, secar a borda do frasco com papel absorvente para evitar o acúmulo de sal. Armazenar as amostras e a água do mar padrão no laboratório onde a determinação será realizada para que alcancem a temperatura ambiente.
+
+%-----------------------------------------------------------------------------%
+\section{Procedimentos Analíticos}
+
+\subsection{Reagentes}
+
+% [noitemsep] removes whitespace between the items for a compact look
+\begin{enumerate}[noitemsep]
+\item \textbf{Solução de cromato de potássio \ce{(K2CrO4)} 8\%} - dissolver 8 g de \ce{(K2CrO4)} em 100 mL de água destilada. Guardar em frasco conta-gotas.
+\item \textbf{Solução de nitrato de prata \ce{(AgNO3)} 0,05M} – dissolver 8 g de \ce{(AgNO3)} em 1000 mL de água destilada. Conservar em frasco de vidro âmbar com tampa de borracha ou vidro.
+\item \textbf{Água do mar padrão} - preparado segundo Kester et al. (1967) (Tabela 1). 
+\end{enumerate}
+
+
+\subsection{Padronização do nitrato de prata}
+% [noitemsep] removes whitespace between the items for a compact look
+\begin{enumerate}[noitemsep]
+\item Agitar a solução de \ce{(AgNO3)} vigorosamente antes de usar;
+\item Pipetar 10 mL da água do mar padrão em um erlenmeyer de 150 mL.  Antes de coletar o volume definitivo, esta pipeta deve ser cuidadosamente lavada;
+\item Adicionar 25 mL de água destilada e 6 gotas da solução de cromato de potássio;
+\item Deixar a mistura sob agitação (mas sem espirrar a\-mo\-stra);
+\item Adicionar a solução de nitrato de prata até que haja um primeiro sinal de mudança de cor;
+\item Interromper a titulação até que a cor volte ao amarelo;
+\item Lavar as gotas da parede do béquer com água destilada;
+\item Recomeçar a adição de solução de nitrato de prata, gota a gota, cuidadosamente até que a solução se torne marrom avermelhada. Essa cor deverá persistir por 30 segundos, sob agitação;
+\item Anotar o volume de solução consumido;
+\item Repetir a padronização mais duas vezes. Os resultados não podem diferir mais do que 0,01 mL. A média aritmética é usada no cálculo da concentração da so\-lu\-ção;
+\item Transferir o conteúdo do béquer para um depósito apropriado e lavá-lo juntamente com o bastão magnético.
+\end{enumerate}
+
+\subsection{Titulação das Amostras}
+%[noitemsep] removes whitespace between the items for a compact look
+\begin{enumerate}[noitemsep]
+ \item Proceder da mesma maneira que a padronização de \ce{(AgNO3)}, tomando-se os mesmos cuidados e precauções;
+ \item Anotar o volume de solução de \ce{(AgNO3)} consumido e repetir a titulação mais uma vez.
+\end{enumerate}
+
+%-----------------------------------------------------------------------------%
+\section{Cálculos}
+
+\textbf {Cálculo do fator de calibração “F”}
+
+\begin{center}
+$F = N/Cm$
+\end{center}
+
+Onde:
+
+N = clorinidade nominal da água do mar padrão (21.105)
+
+Cm = volume médio da padronização do \ce{(AgNO3)}
+
+\vspace{0.20cm}
+\noindent 
+\textbf {Cálculo da clorinidade}
+
+\begin{center}
+$[Cl] = Vm \times F + k$
+\end {center}
+    
+Onde:
+
+Vm = média dos volumes de titulação com \ce{(AgNO3)}
+
+k =valor de correção (Tabela 2)
+ 
+\vspace{0.20cm} 
+\noindent 
+\textbf {Cálculo de salinidade}
+
+\begin{center}
+$S = Cl \times 1,80655$
+\end{center}
+
+%-----------------------------------------------------------------------------%
+%	Lista de Referencias
+%-----------------------------------------------------------------------------%
+%\phantomsection
+\section{Referências}
+Grasshoff, K. \& Wenck, A. (1972). A Modern Version of the Mohr-Knudsen Titration for the Chlorinity of Sea Water.
+
+Kester, D. R., Duedall, I. W., Connors, D. N. \& Pytkowicz, R. M. (1967). Preparation of Artificial Seawater. Limnology \& Oceanography 12, 176—179.
+
+\bibliographystyle{unsrt}
+% \bibliography{sample}
+
+%-----------------------------------------------------------------------------%
+%	Tabelas
+%-----------------------------------------------------------------------------%
+\vfill
+\section{Tabelas}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+\hline
+Sais anidros & \\
+\hline
+\hline
+Sal & g kg$^{-1}$ de solução \\
+\hline
+\ce{NaCl} & 23,926  \\
+\ce {Na2SO4} & 4,008 \\
+\ce {KCl} & 0,677 \\
+\ce {NaHCO3} & 0,19 \\
+\ce {KBr} & 0,098 \\
+\ce {H3BO3} & 0,026 \\
+\ce {NaF} & 0,003 \\
+\hline
+\hline
+Sais hidratados & \\
+\hline
+\hline
+Sal & moles kg$^{-1}$ de solução \\
+\hline
+\ce {MgCl2 . 6H2O} & 0,05327 \\
+\ce {CaCl2 . 2H2O} & 0,01033 \\
+\ce {SrCl2 . 6H2O} & 0,00009 \\
+\hline
+\hline
+1 kg água destilada \\
+\hline
+\hline
+
+
+\end{tabular}
+\caption{Água do Mar Artificial}
+\label{ex:Tabela 1}
+\end{table}
+
+
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+\hline
+Volume & Volume & K \\
+\hline
+\hline
+& 23,18 -- 22,89  & -0,11  \\
+& 22,89 -- 22,59 & -0,10  \\
+& 22,59 -- 22,29 & -0,09  \\
+& 22,29 -- 21,98 & -0,08  \\
+& 21,98 -- 21,66 & -0,07  \\
+& 21,66 -- 21,35 & -0,06  \\
+& 21,35 -- 21,01 & -0,05  \\
+& 21,01 -- 20,67 & -0.04  \\
+& 20,67 -- 20,31 & -0.03  \\
+& 20,31 -- 19,94 & -0,02  \\
+& 19,94 -- 19,57 & -0,01  \\
+0,00 -- 0,18 & 19,57 -- 19,17 & 0,00  \\
+0,18 -- 0,58 & 19,17 -- 18,77 & 0,01  \\
+0,58 -- 0,99 & 18,77 -- 18,34 & 0,02  \\
+0,99 -- 1,42 & 18,34 -- 17,89 & 0,03  \\
+1,42 -- 1,88 & 17,89 -- 17,41 & 0,04  \\
+1,88 -- 2,36 & 17,41 -- 16,91 & 0,05  \\
+2,36 -- 2,88 & 16,91 -- 16,37 & 0,06  \\
+2,88 -- 3,45 & 16,37 -- 15,78 & 0,07  \\
+3,45 -- 4,08 & 15,78 -- 15,13 & 0,08  \\
+4,08 -- 4,79 & 15,13 -- 14,40 & 0,09  \\
+4,79 -- 5,64 & 14,40 -- 13,32 & 0,10  \\
+5,64 -- 6,74 & 13,32 -- 12,39 & 0,11  \\
+6,74 -- 8,82 & 12,39 -- 10,29 & 0,12 \\
+8,82 -- 10.29 & 10,29 -- 8,82 & 0,13  \\ [1ex] % [1ex] adds vertical space
+\hline
+\end{tabular}
+\caption{Valores de k}
+\label{ex:Tabela 1}
+\end{table}
+
+
+
+\end{document}
+
+
+
